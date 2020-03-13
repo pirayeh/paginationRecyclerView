@@ -1,0 +1,3 @@
+rootProject.name='Pagination RecyclerView'
+include ':app'
+include ':paginationrecyclerview'
