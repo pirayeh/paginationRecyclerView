@@ -111,3 +111,9 @@ recyclerView.refresh();
 ```
 
 ✅See Project Sample for better understanding.
+
+
+
+# Version
+
+* 1.0
