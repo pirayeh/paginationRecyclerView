@@ -118,7 +118,7 @@ adapter.setOnItemClickListener(data -> {
 });
 ```
 
-✅See Project Sample for better understanding.
+👀 See sample to better understanding.
 
 
 
