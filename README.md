@@ -22,7 +22,7 @@ allprojects {
 ```
 dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
-    implementation 'com.github.pirayeh:paginationRecyclerView:1.0'
+    implementation 'com.github.pirayeh:paginationRecyclerView:1.0.1'
 }
 ```
 
