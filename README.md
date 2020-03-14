@@ -22,13 +22,13 @@ allprojects {
 ```
 dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
-    implementation 'com.github.pirayeh:paginationRecyclerView:1.0'
+    implementation 'com.github.pirayeh:paginationRecyclerView:1.0.1'
 }
 ```
 
 # Example:
 
-* step 3: Extends adapter
+* step 1: Extends adapter
 
 ```
 class MyAdapter extends PaginationAdapter<String, MyAdapter.SampleViewHolder> {
@@ -69,7 +69,7 @@ class MyAdapter extends PaginationAdapter<String, MyAdapter.SampleViewHolder> {
 ```
 
 
-* step 4: initialize RecyclerView
+* step 2: initialize RecyclerView
 
 
 ```
@@ -98,7 +98,7 @@ adapter = new MyAdapter(this, null);
 recyclerView.setAdapter(adapter);
 ```
 
-* step 5: set data to RecyclerView on get data from server
+* step 3: set data to RecyclerView on get data from server
 ```
 adapter.addAllItems(/*list of data*/);
 ```
@@ -116,4 +116,4 @@ recyclerView.refresh();
 
 # Version
 
-* 1.0
+* 1.0.1
