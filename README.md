@@ -98,11 +98,18 @@ adapter = new MyAdapter(this, null);
 recyclerView.setAdapter(adapter);
 ```
 
-🕹 set data to RecyclerView on get data from server
+🔌 set data to RecyclerView
 ```
 adapter.addAllItems(/*list of data*/);
 ```
-
+or:
+```
+adapter.addItems(/*list of data*/);
+```
+or:
+```
+adapter.addItem(data.get(index));
+```
 
 ♻ if need to clear all data from adapter and fetch again call the refresh() method from recyclerView :
 
