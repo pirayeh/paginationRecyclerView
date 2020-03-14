@@ -104,11 +104,12 @@ adapter.addAllItems(/*list of data*/);
 ```
 
 
-♻ to refresh RecyclerView call this method:
+♻ if need to clear all data from adapter and fetch again call the refresh() method from recyclerView :
 
 ```
 recyclerView.refresh();
 ```
+
 
 🖱 set item click listener
 ```
