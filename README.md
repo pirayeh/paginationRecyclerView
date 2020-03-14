@@ -110,6 +110,13 @@ adapter.addAllItems(/*list of data*/);
 recyclerView.refresh();
 ```
 
+🖱 set item click listener
+```
+adapter.setOnItemClickListener(data -> {
+  Toast.makeText(this, data.toString(), Toast.LENGTH_SHORT).show();
+});
+```
+
 ✅See Project Sample for better understanding.
 
 
