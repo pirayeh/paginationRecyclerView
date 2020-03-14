@@ -28,7 +28,7 @@ dependencies {
 
 # Example:
 
-* step 1: Extends adapter
+🧩 Extends adapter
 
 ```
 class MyAdapter extends PaginationAdapter<String, MyAdapter.SampleViewHolder> {
@@ -69,7 +69,7 @@ class MyAdapter extends PaginationAdapter<String, MyAdapter.SampleViewHolder> {
 ```
 
 
-* step 2: initialize RecyclerView
+🎲 initialize RecyclerView
 
 
 ```
@@ -98,7 +98,7 @@ adapter = new MyAdapter(this, null);
 recyclerView.setAdapter(adapter);
 ```
 
-* step 3: set data to RecyclerView on get data from server
+🕹 set data to RecyclerView on get data from server
 ```
 adapter.addAllItems(/*list of data*/);
 ```
