@@ -28,6 +28,7 @@ dependencies {
 
 # Example:
 
+
 🧩 Extends adapter
 
 ```
@@ -69,6 +70,9 @@ class MyAdapter extends PaginationAdapter<String, MyAdapter.SampleViewHolder> {
 ```
 
 
+
+
+
 🎲 initialize RecyclerView
 
 
@@ -98,6 +102,9 @@ adapter = new MyAdapter(this, null);
 recyclerView.setAdapter(adapter);
 ```
 
+
+
+
 🔌 set data to RecyclerView
 ```
 adapter.addAllItems(/*list of data*/);
@@ -111,11 +118,15 @@ or:
 adapter.addItem(data.get(index));
 ```
 
+
+
+
 ♻ if need to clear all data from adapter and fetch again call the refresh() method from recyclerView :
 
 ```
 recyclerView.refresh();
 ```
+
 
 
 🖱 set item click listener
@@ -124,6 +135,8 @@ adapter.setOnItemClickListener(data -> {
   Toast.makeText(this, data.toString(), Toast.LENGTH_SHORT).show();
 });
 ```
+
+
 
 👀 See sample to better understanding.
 
