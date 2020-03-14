@@ -89,7 +89,7 @@ public final class PaginationRecyclerView extends RecyclerView {
     public void setLoading(boolean loading) {
         this.loading = loading;
         if (mLoadMoreListener != null) {
-            mLoadMoreListener.onLoading(loading && !canScrollVertically(1));
+            mLoadMoreListener.onLoadingChanged(loading && !canScrollVertically(1));
         }
     }
 
@@ -182,7 +182,7 @@ public final class PaginationRecyclerView extends RecyclerView {
     public interface OnLoadMoreListener {
         void onRequestLoadMore(int page, int rowPerPage);
 
-        void onLoading(boolean isEnd);
+        void onLoadingChanged(boolean isLoading);
     }
 
     boolean isEndBottom;
@@ -212,7 +212,7 @@ public final class PaginationRecyclerView extends RecyclerView {
 
                 //onScrolledToTop
                 if (mLoadMoreListener != null) {
-                    mLoadMoreListener.onLoading(isEndBottom);
+                    mLoadMoreListener.onLoadingChanged(isEndBottom);
                     mLoadMoreListener.onRequestLoadMore(getPage(), getRowPerPage());
                 }
 
