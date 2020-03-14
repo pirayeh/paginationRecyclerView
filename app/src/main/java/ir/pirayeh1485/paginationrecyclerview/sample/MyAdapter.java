@@ -33,6 +33,7 @@ class MyAdapter extends PaginationAdapter<String, MyAdapter.SampleViewHolder> {
 
         SampleViewHolder(@NonNull View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
             txtRow = itemView.findViewById(R.id.txtRow);
         }
 
@@ -44,7 +45,7 @@ class MyAdapter extends PaginationAdapter<String, MyAdapter.SampleViewHolder> {
         @Override
         public void onClick(View v) {
             if (mItemClickListener != null)
-                mItemClickListener.onItemSelect(dataSet.get(getCurrentPosition()));
+                mItemClickListener.onItemSelect(dataSet.get(getAdapterPosition()));
         }
     }
 }

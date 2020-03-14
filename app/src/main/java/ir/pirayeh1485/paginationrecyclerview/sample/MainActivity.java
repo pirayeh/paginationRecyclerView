@@ -2,23 +2,26 @@ package ir.pirayeh1485.paginationrecyclerview.sample;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import java.util.ArrayList;
 
+import ir.pirayeh1485.paginationrecyclerview.OnItemClickListener;
 import ir.pirayeh1485.paginationrecyclerview.PaginationAdapter;
 import ir.pirayeh1485.paginationrecyclerview.PaginationRecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int TOTAL_DATA_COUNT = 160;
-    private int row_per_page = 25;
+    private static final int TOTAL_DATA_COUNT = 460;
+    private int row_per_page = 54;
 
     private PaginationRecyclerView recyclerView;
-    private PaginationAdapter adapter;
+    private MyAdapter adapter;
 
     private View loading;
 
@@ -48,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView() {
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 3, LinearLayoutManager.VERTICAL, false));
         recyclerView.setStartLoadingFromLast(4);
         recyclerView.setRowPerPage(row_per_page);
         recyclerView.setOnLoadMoreListener(new PaginationRecyclerView.OnLoadMoreListener() {
@@ -64,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
         adapter = new MyAdapter(this, null);
+
+        //set item click listener
+        adapter.setOnItemClickListener(data -> {
+            Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
+        });
+
         recyclerView.setAdapter(adapter);
     }
 
