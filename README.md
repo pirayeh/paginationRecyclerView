@@ -18,7 +18,7 @@ allprojects {
 }
 ```
 
-* step 2: Add the dependencies to your module gradle 
+* step 2: Add the dependency to your module gradle 
 ```
 dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
