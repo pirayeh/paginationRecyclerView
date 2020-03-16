@@ -117,7 +117,9 @@ or:
 ```
 adapter.addItem(data.get(index));
 ```
+
 </br>
+
 
 ♻ if need to clear all data from adapter and fetch again call the refresh() method from recyclerView :
 
@@ -133,6 +135,7 @@ adapter.setOnItemClickListener(data -> {
   Toast.makeText(this, data.toString(), Toast.LENGTH_SHORT).show();
 });
 ```
+
 </br>
 
 👀 See sample to better understanding.
