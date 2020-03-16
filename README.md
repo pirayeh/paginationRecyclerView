@@ -2,6 +2,10 @@
 a simple library for generic data pagination.
 
 
+[![NPM version](https://img.shields.io/badge/Download-1.0.1-brightgreen.svg)](https://github.com/pirayeh/paginationRecyclerView)
+![NPM version](https://img.shields.io/badge/min%20sdk-17-red.svg)
+
+</br>
 
 # How to Use
 
@@ -25,7 +29,7 @@ dependencies {
     implementation 'com.github.pirayeh:paginationRecyclerView:1.0.1'
 }
 ```
-
+</br>
 # Example:
 
 
@@ -69,9 +73,7 @@ class MyAdapter extends PaginationAdapter<String, MyAdapter.SampleViewHolder> {
 }
 ```
 
-
-
-
+</br>
 
 🎲 initialize RecyclerView
 
@@ -101,9 +103,7 @@ recyclerView.setOnLoadMoreListener(new PaginationRecyclerView.OnLoadMoreListener
 adapter = new MyAdapter(this, null);
 recyclerView.setAdapter(adapter);
 ```
-
-
-
+</br>
 
 🔌 set data to RecyclerView
 ```
@@ -117,9 +117,7 @@ or:
 ```
 adapter.addItem(data.get(index));
 ```
-
-
-
+</br>
 
 ♻ if need to clear all data from adapter and fetch again call the refresh() method from recyclerView :
 
@@ -127,7 +125,7 @@ adapter.addItem(data.get(index));
 recyclerView.refresh();
 ```
 
-
+</br>
 
 🖱 set item click listener
 ```
@@ -135,12 +133,11 @@ adapter.setOnItemClickListener(data -> {
   Toast.makeText(this, data.toString(), Toast.LENGTH_SHORT).show();
 });
 ```
-
-
+</br>
 
 👀 See sample to better understanding.
 
-
+</br>
 
 # Version
 
